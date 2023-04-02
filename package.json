@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
+  "workspaces": ["./src/plugins/strapi-plugin-ckeditor"],
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -10,10 +11,13 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.3.6",
+    "@_sh/strapi-plugin-ckeditor": "^2.0.4",
+    "@ckeditor/ckeditor5-react": "^5.1.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@strapi/plugin-i18n": "4.8.2",
     "@strapi/plugin-seo": "^1.7.4",
-    "@strapi/plugin-users-permissions": "4.3.6",
-    "@strapi/strapi": "4.3.6",
+    "@strapi/plugin-users-permissions": "4.8.2",
+    "@strapi/strapi": "4.8.2",
     "better-sqlite3": "7.4.6",
     "pg": "^8.8.0",
     "pg-connection-string": "^2.5.0",

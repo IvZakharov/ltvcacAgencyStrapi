@@ -12,4 +12,11 @@ module.exports = {
       },
     },
   },
+  plugins: {
+    // Add CKEditor plugin here
+    ckeditor: {
+      enabled: true,
+      resolve: "./src/plugins/strapi-plugin-ckeditor"
+    },
+  },
 };
