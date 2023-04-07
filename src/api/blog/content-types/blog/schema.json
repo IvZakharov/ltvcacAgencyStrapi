@@ -21,9 +21,6 @@
       "targetField": "postName",
       "required": true
     },
-    "subtitle": {
-      "type": "string"
-    },
     "postImage": {
       "type": "media",
       "multiple": false,
@@ -35,20 +32,28 @@
         "audios"
       ]
     },
-    "content": {
-      "type": "richtext"
-    },
     "Seo": {
       "type": "component",
       "repeatable": true,
       "component": "shared.seo"
     },
-    "contents": {
+    "content": {
       "type": "customField",
       "options": {
-        "preset": "toolbar"
+        "preset": "toolbarBaloon"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "blog"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
     }
   }
 }
